@@ -99,7 +99,7 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="flex items-center justify-end gap-1.5">
+        <div className="col-start-3 flex items-center gap-1.5 justify-self-end">
           <ThemeToggle />
           <Button asChild className="hidden h-10 px-4 text-sm sm:inline-flex">
             <a {...appLink}>

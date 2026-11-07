@@ -462,6 +462,13 @@ Supporting UI:
 
 ---
 
+### Phase 21 — Mobile header alignment ✅ Done
+
+- [x] Pinned the header action group to the third grid column so the theme toggle and menu stay right-aligned when the desktop nav is hidden.
+- [x] Verified 320/390/640/768/1024/1440: no overflow, no console errors, and the desktop layout is unchanged.
+
+---
+
 ## 6. Current implementation map
 
 | File                                              | Responsibility                                                               |
