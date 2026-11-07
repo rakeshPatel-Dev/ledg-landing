@@ -2,7 +2,7 @@
  * Single source of truth for links and launch copy.
  * Change the app URL here and every CTA follows.
  */
-const defaultSiteUrl = "https://ledg.app";
+const defaultSiteUrl = "https://ledg.rakeshpatel.me";
 
 function resolveSiteUrl(value: string | undefined) {
   const raw = value?.trim();
@@ -19,9 +19,9 @@ function resolveSiteUrl(value: string | undefined) {
 export const siteConfig = {
   name: "Ledg",
   url: resolveSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
-  appUrl: "https://ledg.rakeshpatel.me",
+  appUrl: "https://app.ledg.rakeshpatel.me",
   appLabel: "Sign up",
-  contactEmail: "hello@ledg.app",
+  contactEmail: "ledg@rakeshpatel.me",
 } as const;
 
 export const appLink = {

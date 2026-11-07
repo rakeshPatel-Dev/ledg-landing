@@ -106,7 +106,7 @@ export function FaqSection() {
                   Point your camera at the code, or use the button.
                 </p>
                 <p className="mt-3 text-[11px] break-all text-white/35">
-                  ledg.rakeshpatel.me
+                  app.ledg.rakeshpatel.me
                 </p>
               </div>
             </div>

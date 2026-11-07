@@ -62,7 +62,7 @@ Every launch CTA reads from one place:
 ```ts
 // src/config/site.ts
 export const siteConfig = {
-  appUrl: "https://ledg.rakeshpatel.me",
+  appUrl: "https://app.ledg.rakeshpatel.me",
   appLabel: "Sign up",
   // ...
 };
@@ -237,7 +237,7 @@ Supporting UI:
   - Social links, “Open Ledg,” and back-to-top.
 - Metadata:
   - Title template and description.
-  - Canonical `https://ledg.app`.
+  - Canonical `https://ledg.rakeshpatel.me`.
   - Open Graph and Twitter metadata.
   - Robots directives.
   - JSON-LD `SoftwareApplication` schema with `operatingSystem: "Web"` and the live app URL.
@@ -250,8 +250,8 @@ Supporting UI:
 
 **Outstanding:**
 
-- [ ] Confirm `https://ledg.app` is the production canonical domain.
-- [ ] Confirm `@ledg` on X and the `hello@ledg.app` mailbox are live.
+- [ ] Confirm `https://ledg.rakeshpatel.me` is the production canonical domain.
+- [ ] Confirm `@ledg` on X and the `ledg@rakeshpatel.me` mailbox are live.
 - [ ] Replace `href="#"` placeholders for About, Blog, Changelog, and Terms when those pages exist.
 
 ---
@@ -267,7 +267,7 @@ Supporting UI:
 - [x] Mobile light section review.
 - [x] Mobile menu open, navigate, and close.
 - [x] FAQ expand and collapse.
-- [x] Every desktop app CTA points to `https://ledg.rakeshpatel.me` in the same tab, with no `target` attribute.
+- [x] Every desktop app CTA points to `https://app.ledg.rakeshpatel.me` in the same tab, with no `target` attribute.
 - [x] Mobile menu CTA also points to the live app.
 - [x] No `#waitlist` links remain.
 - [x] The live app URL responds with the title “Ledg - Smart Spend.”
@@ -313,7 +313,7 @@ Supporting UI:
 
 - [ ] Choose host (Vercel is the default for Next.js).
 - [ ] Connect the repository and set the production branch.
-- [ ] Configure the `ledg.app` domain and HTTPS.
+- [ ] Configure the `ledg.rakeshpatel.me` domain and HTTPS.
 - [ ] Set preview deployments for pull requests.
 - [ ] Add build checks: lint, typecheck, build.
 - [ ] Verify metadata, OG image, and JSON-LD in the deployed HTML.
@@ -441,14 +441,24 @@ Supporting UI:
 
 ### Phase 19 — Vercel deployment readiness ✅ Done
 
-- [x] Made `siteConfig.url` environment-aware through `NEXT_PUBLIC_SITE_URL`, with `https://ledg.app` as the fallback.
+- [x] Made `siteConfig.url` environment-aware through `NEXT_PUBLIC_SITE_URL`, with `https://ledg.rakeshpatel.me` as the fallback.
 - [x] Added `robots.ts` and `sitemap.ts` driven by the same site URL.
 - [x] Added `.env.example`, allowed it through `.gitignore`, and set the Node engine to `>=20.9.0`.
 - [x] Added `vercel.json` with the Next.js preset and baseline security headers.
 - [x] Disabled the `X-Powered-By` header and documented the Vercel import flow in the README.
-- [x] Verified a production build with a Vercel-style URL: canonical, Open Graph, robots, and sitemap all follow `NEXT_PUBLIC_SITE_URL`; the fallback is `https://ledg.app`.
+- [x] Verified a production build with a Vercel-style URL: canonical, Open Graph, robots, and sitemap all follow `NEXT_PUBLIC_SITE_URL`; the fallback is `https://ledg.rakeshpatel.me`.
 - [x] `/robots.txt` and `/sitemap.xml` build as static routes.
 - [x] `npm run lint`, `npx tsc --noEmit`, `npm run build`, and `npm run format:check` pass.
+
+---
+
+### Phase 20 — Production domains and contact ✅ Done
+
+- [x] Set the landing URL to `https://ledg.rakeshpatel.me` as the canonical and sitemap origin.
+- [x] Set the app URL to `https://app.ledg.rakeshpatel.me` for every sign-in, sign-up, privacy, and terms link.
+- [x] Set the contact address to `ledg@rakeshpatel.me` in the footer and FAQ.
+- [x] Regenerated the FAQ QR code for the new app URL.
+- [x] Updated `.env.example`, the README, and the launch assumptions.
 
 ---
 
@@ -484,8 +494,8 @@ Supporting UI:
 
 ## 7. Assumptions to confirm
 
-- The product name is **Ledg**, domain `ledg.app`, contact `hello@ledg.app`.
-- The live web app is `https://ledg.rakeshpatel.me` for now and requires sign in or sign up.
+- The product name is **Ledg**, domain `ledg.rakeshpatel.me`, contact `ledg@rakeshpatel.me`.
+- The live web app is `https://app.ledg.rakeshpatel.me` for now and requires sign in or sign up.
 - Ledg is a web app. Offline mode, bank sync, native apps, and multi-currency are not claimed.
 - The first release is manual-entry, with CSV export and import.
 - Real features only: income and expenses, five-second entry, shared spaces, monthly budgets, dues, analytics, and themes.
@@ -563,7 +573,7 @@ Manual checks after `npm run dev`:
 3. Resize from 320px to 1920px.
 4. Open the mobile menu, navigate to a section, and close it.
 5. Expand and collapse every FAQ item.
-6. Click every “Sign up” CTA and confirm it opens `https://ledg.rakeshpatel.me`.
+6. Click every “Sign up” CTA and confirm it opens `https://app.ledg.rakeshpatel.me`.
 7. Confirm the app shows sign in or sign up.
 8. Reload and confirm the theme persists.
 9. Navigate with the keyboard only.
