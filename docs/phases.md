@@ -439,6 +439,19 @@ Supporting UI:
 
 ---
 
+### Phase 19 — Vercel deployment readiness ✅ Done
+
+- [x] Made `siteConfig.url` environment-aware through `NEXT_PUBLIC_SITE_URL`, with `https://ledg.app` as the fallback.
+- [x] Added `robots.ts` and `sitemap.ts` driven by the same site URL.
+- [x] Added `.env.example`, allowed it through `.gitignore`, and set the Node engine to `>=20.9.0`.
+- [x] Added `vercel.json` with the Next.js preset and baseline security headers.
+- [x] Disabled the `X-Powered-By` header and documented the Vercel import flow in the README.
+- [x] Verified a production build with a Vercel-style URL: canonical, Open Graph, robots, and sitemap all follow `NEXT_PUBLIC_SITE_URL`; the fallback is `https://ledg.app`.
+- [x] `/robots.txt` and `/sitemap.xml` build as static routes.
+- [x] `npm run lint`, `npx tsc --noEmit`, `npm run build`, and `npm run format:check` pass.
+
+---
+
 ## 6. Current implementation map
 
 | File                                              | Responsibility                                                               |
@@ -446,9 +459,11 @@ Supporting UI:
 | `src/app/page.tsx`                                | Section composition and JSON-LD                                              |
 | `src/app/layout.tsx`                              | Fonts, metadata, viewport, theme provider                                    |
 | `src/app/globals.css`                             | Tokens, dark mode, utilities, motion                                         |
+| `src/app/robots.ts`                               | Static crawl rules and sitemap pointer                                       |
+| `src/app/sitemap.ts`                              | Static single-page sitemap                                                   |
 | `src/app/opengraph-image.png`                     | Social preview image                                                         |
 | `src/app/twitter-image.png`                       | Twitter/X preview image                                                      |
-| `src/config/site.ts`                              | Single source for app URL, CTA label, contact, and routes                    |
+| `src/config/site.ts`                              | Env-aware site URL, app URL, CTA label, contact, and routes                  |
 | `src/components/landing/hero.tsx`                 | Centered hero, floating cards, hand/phone image                              |
 | `src/components/landing/site-header.tsx`          | Sticky nav, mobile sheet, theme toggle, footer-aware hide                    |
 | `src/components/landing/use-cases-section.tsx`    | Spaces bento: real spaces, household members, and dues                       |
